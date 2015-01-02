@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var breedLabel: UILabel!
+    @IBOutlet weak var factLabel: UILabel!
     
     var myTigers:[Tiger] = []
     var currentIndex = 0
@@ -25,19 +26,19 @@ class ViewController: UIViewController {
         var myTiger = Tiger()
         myTiger.name = "John"
         myTiger.breed = "Super"
-        myTiger.age = 3
+        myTiger.age = myTiger.realTigerAge(3)
         myTiger.image = UIImage(named: "1.jpg")
         
         var secondTiger = Tiger()
         secondTiger.name = "Mike"
         secondTiger.breed = "Very cool"
-        secondTiger.age = 7
+        secondTiger.age = secondTiger.realTigerAge(7)
         secondTiger.image = UIImage(named: "2.jpg")
         
         var thirdTiger = Tiger()
         thirdTiger.name = "Bor"
         thirdTiger.breed = "The Greatest"
-        thirdTiger.age = 10
+        thirdTiger.age = thirdTiger.realTigerAge(11)
         thirdTiger.image = UIImage(named: "3.jpg")
         
         myTigers += [myTiger, secondTiger, thirdTiger]
@@ -46,6 +47,12 @@ class ViewController: UIViewController {
         nameLabel.text = myTiger.name
         breedLabel.text = myTiger.breed
         ageLabel.text = "\(myTiger.age)"
+        factLabel.text = myTiger.randomFactAboutTiger()
+        
+        /*
+        myTiger.chuffTiger(5, isLoud: true)
+        secondTiger.chuffTiger(3, isLoud: false)
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +76,7 @@ class ViewController: UIViewController {
                 self.ageLabel.text = "\(currentTiger.age)"
                 self.nameLabel.text = currentTiger.name
                 self.breedLabel.text = currentTiger.breed
+                self.factLabel.text = currentTiger.randomFactAboutTiger()
             }, completion: {
                 (finished: Bool) -> () in
         })

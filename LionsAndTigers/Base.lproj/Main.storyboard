@@ -42,7 +42,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="543" width="298" height="21"/>
+                                    <rect key="frame" x="29" y="496" width="298" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-lB-Rne">
@@ -51,7 +51,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="572" width="298" height="21"/>
+                                    <rect key="frame" x="29" y="525" width="298" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kye-k8-xBr">
@@ -60,7 +60,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="514" width="298" height="21"/>
+                                    <rect key="frame" x="29" y="467" width="298" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoi-eQ-YsV">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="29" y="554" width="298" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -72,6 +81,7 @@
                                 <exclude reference="hKK-Y6-rX1"/>
                                 <exclude reference="5CT-lB-Rne"/>
                                 <exclude reference="kye-k8-xBr"/>
+                                <exclude reference="Qoi-eQ-YsV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -81,12 +91,14 @@
                                 <include reference="hKK-Y6-rX1"/>
                                 <include reference="5CT-lB-Rne"/>
                                 <include reference="kye-k8-xBr"/>
+                                <include reference="Qoi-eQ-YsV"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="ageLabel" destination="hKK-Y6-rX1" id="Z7C-Ye-N5p"/>
                         <outlet property="breedLabel" destination="5CT-lB-Rne" id="aLQ-Pz-PCP"/>
+                        <outlet property="factLabel" destination="Qoi-eQ-YsV" id="hf7-kB-eDM"/>
                         <outlet property="myImageView" destination="ptT-vk-TRk" id="2Sm-ng-H3Q"/>
                         <outlet property="nameLabel" destination="kye-k8-xBr" id="Mvt-9Z-VPK"/>
                     </connections>
